@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="73" id="KGk-i7-Jjw" customClass="WalletTableViewCell" customModule="Outcubator" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="366" height="73"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="366" height="73"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7lW-gQ-GxU">
+                        <rect key="frame" x="12" y="16.5" width="36" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="7lW-gQ-GxU" secondAttribute="height" id="2Ef-BH-ihs"/>
+                            <constraint firstAttribute="height" constant="36" id="NUH-oz-bUQ"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_next" translatesAutoresizingMaskIntoConstraints="NO" id="ffV-5j-vTd">
+                        <rect key="frame" x="344" y="28" width="10" height="13"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="10" id="BVp-ys-JxF"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MD6-2m-yvx">
+                        <rect key="frame" x="226.5" y="16.5" width="105.5" height="36"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 399" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Tq-EL-bqJ" customClass="OCLabel" customModule="Outcubator" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="105.5" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Under Risk Review" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Luz-MY-5Z7" customClass="OCLabel" customModule="Outcubator" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="21.5" width="105.5" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8tu-hF-JVp">
+                        <rect key="frame" x="64" y="12" width="107" height="44.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Warcraft game" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oTb-dA-5oZ" customClass="OCLabel" customModule="Outcubator" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="107" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paid to Steam" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHv-Jj-4lR" customClass="OCLabel" customModule="Outcubator" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="27.5" width="107" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="MD6-2m-yvx" firstAttribute="centerY" secondItem="8tu-hF-JVp" secondAttribute="centerY" id="71O-Nj-5lS"/>
+                    <constraint firstAttribute="trailing" secondItem="ffV-5j-vTd" secondAttribute="trailing" constant="12" id="I5S-Ta-hBJ"/>
+                    <constraint firstItem="7lW-gQ-GxU" firstAttribute="centerY" secondItem="8tu-hF-JVp" secondAttribute="centerY" id="PyI-xd-QMN"/>
+                    <constraint firstItem="7lW-gQ-GxU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="j3p-Ux-5Dd"/>
+                    <constraint firstItem="ffV-5j-vTd" firstAttribute="leading" secondItem="MD6-2m-yvx" secondAttribute="trailing" constant="12" id="kRq-JC-RuI"/>
+                    <constraint firstItem="8tu-hF-JVp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="lce-x8-uR2"/>
+                    <constraint firstItem="8tu-hF-JVp" firstAttribute="leading" secondItem="7lW-gQ-GxU" secondAttribute="trailing" constant="16" id="qVr-Uv-M0a"/>
+                    <constraint firstItem="MD6-2m-yvx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8tu-hF-JVp" secondAttribute="trailing" constant="12" id="tey-gd-QH4"/>
+                    <constraint firstItem="ffV-5j-vTd" firstAttribute="centerY" secondItem="8tu-hF-JVp" secondAttribute="centerY" id="vO5-Ml-IKy"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="8tu-hF-JVp" secondAttribute="bottom" constant="12" id="zZW-gs-L8i"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="currentcyLabel" destination="1Tq-EL-bqJ" id="kZD-tE-2JG"/>
+                <outlet property="itemNameLabel" destination="oTb-dA-5oZ" id="crb-67-e5I"/>
+                <outlet property="nextIcon" destination="ffV-5j-vTd" id="yn3-dA-9fh"/>
+                <outlet property="reasonLabel" destination="mHv-Jj-4lR" id="sqh-vY-hiZ"/>
+                <outlet property="rickLabel" destination="Luz-MY-5Z7" id="vT0-9c-ekb"/>
+                <outlet property="walletLogo" destination="7lW-gQ-GxU" id="xut-KV-geE"/>
+            </connections>
+            <point key="canvasLocation" x="133.33333333333334" y="49.888392857142854"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_next" width="8" height="13"/>
+    </resources>
+</document>

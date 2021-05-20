@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "ic_terms_of_use.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

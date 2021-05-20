@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PaymentViewController" customModule="Outcubator" customModuleProvider="target">
+            <connections>
+                <outlet property="amountLabel" destination="a6U-7h-eRz" id="vB9-vU-nhv"/>
+                <outlet property="availableTextLabel" destination="gdD-cR-dWa" id="VkV-Ag-mSa"/>
+                <outlet property="balanceTextLabel" destination="mDu-pq-57e" id="QTp-tp-zm8"/>
+                <outlet property="changeLabel" destination="6C4-wW-99B" id="AG7-KD-sW2"/>
+                <outlet property="defaultPaymentTextLabel" destination="LqD-ek-hmI" id="bCr-YQ-cwo"/>
+                <outlet property="fasterPayCurrencyLabel" destination="MsL-Vg-Orf" id="em0-43-zoD"/>
+                <outlet property="fasterPayTextLabel" destination="LCX-3a-pgT" id="D9K-vR-UM0"/>
+                <outlet property="feeLabel" destination="WH9-cl-dm0" id="svB-nX-M8P"/>
+                <outlet property="feeTextLabel" destination="jKN-73-iij" id="zkc-uX-ITg"/>
+                <outlet property="logo" destination="V8L-8u-Bah" id="nJ9-sc-SuI"/>
+                <outlet property="namePayLabel" destination="Tm3-04-lo0" id="w8k-5D-DoI"/>
+                <outlet property="nextIcon" destination="Ml0-by-gfQ" id="hhd-Yi-npt"/>
+                <outlet property="payButton" destination="qNd-xD-7g1" id="Rkn-2E-GGg"/>
+                <outlet property="subTotalLabel" destination="49K-Cs-Pgp" id="oMF-cD-Vbd"/>
+                <outlet property="subtotalTextLabel" destination="BHO-MV-9FZ" id="N85-Gs-2h5"/>
+                <outlet property="topView" destination="YVQ-au-N8E" id="xlk-IA-88I"/>
+                <outlet property="totalAmountTextLabel" destination="CX2-FU-Cf1" id="Kfz-Sn-P4C"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="walletLabel" destination="Ye6-zb-pLy" id="LGc-RP-Aew"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="OCGradientView" customModule="Outcubator" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cka-LZ-MWL">
+                    <rect key="frame" x="0.0" y="44" width="414" height="311"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_steam" translatesAutoresizingMaskIntoConstraints="NO" id="V8L-8u-Bah">
+                            <rect key="frame" x="167" y="115.5" width="80" height="80"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="V8L-8u-Bah" secondAttribute="height" id="5ls-cq-uhj"/>
+                                <constraint firstAttribute="height" constant="80" id="lnn-Yb-zQy"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="V8L-8u-Bah" firstAttribute="centerX" secondItem="Cka-LZ-MWL" secondAttribute="centerX" id="Pqe-JE-bFg"/>
+                        <constraint firstItem="V8L-8u-Bah" firstAttribute="centerY" secondItem="Cka-LZ-MWL" secondAttribute="centerY" id="s1X-FM-p0b"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="EFW-Zf-y7c">
+                    <rect key="frame" x="0.0" y="355" width="414" height="507"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YVQ-au-N8E">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="93.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PAYDAY 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tm3-04-lo0" customClass="OCLabel" customModule="Outcubator" customModuleProvider="target">
+                                    <rect key="frame" x="12" y="24" width="390" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ye6-zb-pLy" customClass="OCLabel" customModule="Outcubator" customModuleProvider="target">
+                                    <rect key="frame" x="12" y="60" width="390" height="21.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="Tm3-04-lo0" secondAttribute="trailing" constant="12" id="7tm-MG-sRv"/>
+                                <constraint firstItem="Ye6-zb-pLy" firstAttribute="leading" secondItem="YVQ-au-N8E" secondAttribute="leading" constant="12" id="CTY-L9-hb4"/>
+                                <constraint firstItem="Tm3-04-lo0" firstAttribute="leading" secondItem="YVQ-au-N8E" secondAttribute="leading" constant="12" id="dDV-7G-lZc"/>
+                                <constraint firstItem="Tm3-04-lo0" firstAttribute="top" secondItem="YVQ-au-N8E" secondAttribute="top" constant="24" id="gx9-wj-WuN"/>
+                                <constraint firstAttribute="bottom" secondItem="Ye6-zb-pLy" secondAttribute="bottom" constant="12" id="leJ-ta-9mn"/>
+                                <constraint firstAttribute="trailing" secondItem="Ye6-zb-pLy" secondAttribute="trailing" constant="12" id="tD0-M4-Lff"/>
+                                <constraint firstItem="Ye6-zb-pLy" firstAttribute="top" secondItem="Tm3-04-lo0" secondAttribute="bottom" constant="12" id="ub9-mD-Hwg"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fCQ-4Z-7LB">
+                            <rect key="frame" x="0.0" y="93.5" width="414" height="1"/>
+                            <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="wzM-FG-NiF"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GPy-wF-qyp">
+                            <rect key="frame" x="0.0" y="94.5" width="414" height="63.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total amount:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CX2-FU-Cf1" customClass="OCLabel" customModule="Outcubator" customModuleProvider="target">
+                                    <rect key="frame" x="12" y="12" width="390" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="$15.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6U-7h-eRz" customClass="OCLabel" customModule="Outcubator" customModuleProvider="target">
+                                    <rect key="frame" x="12" y="33" width="67.5" height="26.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_next" translatesAutoresizingMaskIntoConstraints="NO" id="Ml0-by-gfQ">
+                                    <rect key="frame" x="394" y="41.5" width="8" height="10"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="10" id="EMr-W1-GpC"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="Ml0-by-gfQ" secondAttribute="trailing" constant="12" id="IXy-kV-ZD4"/>
+                                <constraint firstAttribute="trailing" secondItem="CX2-FU-Cf1" secondAttribute="trailing" constant="12" id="S6O-Ks-yWn"/>
+                                <constraint firstItem="Ml0-by-gfQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="a6U-7h-eRz" secondAttribute="trailing" constant="8" id="SXe-fc-8sM"/>
+                                <constraint firstItem="CX2-FU-Cf1" firstAttribute="top" secondItem="GPy-wF-qyp" secondAttribute="top" constant="12" id="e2q-Jg-ncb"/>
+                                <constraint firstItem="a6U-7h-eRz" firstAttribute="leading" secondItem="GPy-wF-qyp" secondAttribute="leading" constant="12" id="ee0-d0-nlY"/>
+                                <constraint firstAttribute="bottom" secondItem="a6U-7h-eRz" secondAttribute="bottom" constant="4" id="heT-QA-dgL"/>
+                                <constraint firstItem="CX2-FU-Cf1" firstAttribute="leading" secondItem="GPy-wF-qyp" secondAttribute="leading" constant="12" id="hzg-qT-AUw"/>
+                                <constraint firstItem="Ml0-by-gfQ" firstAttribute="centerY" secondItem="a6U-7h-eRz" secondAttribute="centerY" id="pGP-x4-iPs"/>
+                                <constraint firstItem="a6U-7h-eRz" firstAttribute="top" secondItem="CX2-FU-Cf1" secondAttribute="bottom" constant="4" id="vJX-Oq-O58"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rCR-ji-kwZ">
+                            <rect key="frame" x="0.0" y="158" width="414" height="50"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtotal:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BHO-MV-9FZ" customClass="OCLabel" customModule="Outcubator" customModuleProvider="target">
+                                    <rect key="frame" x="12" y="4" width="390" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$10.00 USD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49K-Cs-Pgp" customClass="OCLabel" customModule="Outcubator" customModuleProvider="target">
+                                    <rect key="frame" x="12" y="23" width="390" height="23"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="BHO-MV-9FZ" firstAttribute="leading" secondItem="rCR-ji-kwZ" secondAttribute="leading" constant="12" id="0ad-bX-jv3"/>
+                                <constraint firstAttribute="trailing" secondItem="BHO-MV-9FZ" secondAttribute="trailing" constant="12" id="IbG-AP-L2u"/>
+                                <constraint firstAttribute="trailing" secondItem="49K-Cs-Pgp" secondAttribute="trailing" constant="12" id="K9O-bS-8Co"/>
+                                <constraint firstAttribute="bottom" secondItem="49K-Cs-Pgp" secondAttribute="bottom" constant="4" id="T3d-TV-DNM"/>
+                                <constraint firstItem="49K-Cs-Pgp" firstAttribute="top" secondItem="BHO-MV-9FZ" secondAttribute="bottom" constant="2" id="VfX-sf-hR7"/>
+                                <constraint firstItem="BHO-MV-9FZ" firstAttribute="top" secondItem="rCR-ji-kwZ" secondAttribute="top" constant="4" id="ksr-dA-vju"/>
+                                <constraint firstItem="49K-Cs-Pgp" firstAttribute="leading" secondItem="rCR-ji-kwZ" secondAttribute="leading" constant="12" id="sH3-6X-6VR"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wyG-D9-I2W">
+                            <rect key="frame" x="0.0" y="208" width="414" height="50"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FEE:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jKN-73-iij" customClass="OCLabel" customModule="Outcubator" customModuleProvider="target">
+                                    <rect key="frame" x="12" y="4" width="390" height="23"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$5.00 USD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WH9-cl-dm0" customClass="OCLabel" customModule="Outcubator" customModuleProvider="target">
+                                    <rect key="frame" x="12" y="29" width="390" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="jKN-73-iij" secondAttribute="trailing" constant="12" id="2bg-jS-jYn"/>
+                                <constraint firstItem="WH9-cl-dm0" firstAttribute="top" secondItem="jKN-73-iij" secondAttribute="bottom" constant="2" id="7K4-M9-dFU"/>
+                                <constraint firstItem="WH9-cl-dm0" firstAttribute="leading" secondItem="wyG-D9-I2W" secondAttribute="leading" constant="12" id="CIf-eT-2Yl"/>
+                                <constraint firstItem="jKN-73-iij" firstAttribute="top" secondItem="wyG-D9-I2W" secondAttribute="top" constant="4" id="DzC-7k-Hxd"/>
+                                <constraint firstItem="jKN-73-iij" firstAttribute="leading" secondItem="wyG-D9-I2W" secondAttribute="leading" constant="12" id="N87-33-GiN"/>
+                                <constraint firstAttribute="bottom" secondItem="WH9-cl-dm0" secondAttribute="bottom" constant="4" id="WPZ-7c-Od0"/>
+                                <constraint firstAttribute="trailing" secondItem="WH9-cl-dm0" secondAttribute="trailing" constant="12" id="btl-d8-iC9"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F0X-Ci-5zk">
+                            <rect key="frame" x="0.0" y="258" width="414" height="129"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Default payment method" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LqD-ek-hmI" customClass="OCLabel" customModule="Outcubator" customModuleProvider="target">
+                                    <rect key="frame" x="12" y="24" width="179.5" height="19.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available balance" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdD-cR-dWa" customClass="OCLabel" customModule="Outcubator" customModuleProvider="target">
+                                    <rect key="frame" x="277" y="24" width="125" height="19.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FasterPay" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCX-3a-pgT" customClass="OCLabel" customModule="Outcubator" customModuleProvider="target">
+                                    <rect key="frame" x="12" y="55.5" width="86" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="balance:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mDu-pq-57e" customClass="OCLabel" customModule="Outcubator" customModuleProvider="target">
+                                    <rect key="frame" x="12" y="83.5" width="68" height="21.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 100.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MsL-Vg-Orf" customClass="OCLabel" customModule="Outcubator" customModuleProvider="target">
+                                    <rect key="frame" x="324" y="55.5" width="78" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6C4-wW-99B" customClass="OCLabel" customModule="Outcubator" customModuleProvider="target">
+                                    <rect key="frame" x="339.5" y="83.5" width="62.5" height="21.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <color key="textColor" systemColor="systemBlueColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="LCX-3a-pgT" firstAttribute="leading" secondItem="F0X-Ci-5zk" secondAttribute="leading" constant="12" id="2nN-ne-tu1"/>
+                                <constraint firstItem="6C4-wW-99B" firstAttribute="centerY" secondItem="mDu-pq-57e" secondAttribute="centerY" id="5te-Yl-DdZ"/>
+                                <constraint firstItem="MsL-Vg-Orf" firstAttribute="centerY" secondItem="LCX-3a-pgT" secondAttribute="centerY" id="6j2-Px-iO6"/>
+                                <constraint firstAttribute="trailing" secondItem="6C4-wW-99B" secondAttribute="trailing" constant="12" id="8Ob-Kt-AhL"/>
+                                <constraint firstItem="gdD-cR-dWa" firstAttribute="centerY" secondItem="LqD-ek-hmI" secondAttribute="centerY" id="9Pz-YI-8dq"/>
+                                <constraint firstAttribute="trailing" secondItem="MsL-Vg-Orf" secondAttribute="trailing" constant="12" id="BFx-Hc-CTp"/>
+                                <constraint firstItem="mDu-pq-57e" firstAttribute="top" secondItem="LCX-3a-pgT" secondAttribute="bottom" constant="4" id="ENk-Hz-ndG"/>
+                                <constraint firstItem="LqD-ek-hmI" firstAttribute="leading" secondItem="F0X-Ci-5zk" secondAttribute="leading" constant="12" id="GQ1-Pt-Gm0"/>
+                                <constraint firstAttribute="bottom" secondItem="mDu-pq-57e" secondAttribute="bottom" constant="24" id="INW-3c-tNB"/>
+                                <constraint firstItem="LqD-ek-hmI" firstAttribute="top" secondItem="F0X-Ci-5zk" secondAttribute="top" constant="24" id="WJv-C6-AE0"/>
+                                <constraint firstAttribute="trailing" secondItem="gdD-cR-dWa" secondAttribute="trailing" constant="12" id="eDz-A7-0QJ"/>
+                                <constraint firstItem="mDu-pq-57e" firstAttribute="leading" secondItem="F0X-Ci-5zk" secondAttribute="leading" constant="12" id="h3a-6k-ZrS"/>
+                                <constraint firstItem="LCX-3a-pgT" firstAttribute="top" secondItem="LqD-ek-hmI" secondAttribute="bottom" constant="12" id="kRA-2a-eH7"/>
+                                <constraint firstItem="gdD-cR-dWa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="LqD-ek-hmI" secondAttribute="trailing" constant="8" id="pqf-op-UoC"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7IY-kv-iKY">
+                            <rect key="frame" x="0.0" y="387" width="414" height="120"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNd-xD-7g1" customClass="SubmitButton" customModule="Outcubator" customModuleProvider="target">
+                                    <rect key="frame" x="24" y="35" width="366" height="50"/>
+                                    <color key="backgroundColor" red="0.99607843139999996" green="0.75294117650000003" blue="0.074509803920000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="goP-tB-NAk"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                    <state key="normal" title="Pay $15.00">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="qNd-xD-7g1" firstAttribute="centerY" secondItem="7IY-kv-iKY" secondAttribute="centerY" id="3EI-Lz-NE4"/>
+                                <constraint firstAttribute="trailing" secondItem="qNd-xD-7g1" secondAttribute="trailing" constant="24" id="PV4-Rb-6KF"/>
+                                <constraint firstItem="qNd-xD-7g1" firstAttribute="centerX" secondItem="7IY-kv-iKY" secondAttribute="centerX" id="Rpy-Bh-D0B"/>
+                                <constraint firstAttribute="height" constant="120" id="aJJ-rs-bF3"/>
+                                <constraint firstItem="qNd-xD-7g1" firstAttribute="leading" secondItem="7IY-kv-iKY" secondAttribute="leading" constant="24" id="v0e-01-0Sq"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Cka-LZ-MWL" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="24C-lp-GHT"/>
+                <constraint firstItem="Cka-LZ-MWL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="6Af-Py-EY5"/>
+                <constraint firstItem="EFW-Zf-y7c" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="94d-7a-fmc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="EFW-Zf-y7c" secondAttribute="bottom" id="C1R-Pi-4Q6"/>
+                <constraint firstItem="EFW-Zf-y7c" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="f36-gl-5bb"/>
+                <constraint firstItem="Cka-LZ-MWL" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="oc3-Os-mnd"/>
+                <constraint firstItem="EFW-Zf-y7c" firstAttribute="top" secondItem="Cka-LZ-MWL" secondAttribute="bottom" id="pCI-Br-mNI"/>
+            </constraints>
+            <point key="canvasLocation" x="5.7971014492753632" y="55.580357142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_next" width="8" height="13"/>
+        <image name="ic_steam" width="83" height="80"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
