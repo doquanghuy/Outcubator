@@ -12,12 +12,10 @@ struct QRCodeDomain: Codable {
     public let currency: String
     public let amount: Double
     public let fee: Double
-    public let createdTime: TimeInterval
     public let isCredit: Bool
-    public let userId: String
     public let id: String
     
     private enum CodingKeys: String, CodingKey {
-        case id, companyName, currency, amount, fee, createdTime, isCredit, userId
+        case id, companyName, currency, amount, fee, isCredit
     }
 }
