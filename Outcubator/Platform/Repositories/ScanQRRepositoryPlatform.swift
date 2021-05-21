@@ -25,6 +25,7 @@ final class DefaultScanQRRepository: ScanQRRepository {
             switch status {
             case .authorized:
                 observer.onNext(.authorized)
+                observer.onCompleted()
             case .notDetermined:
                 AVCaptureDevice.requestAccess(for: .video) { result in
                     if result == true {
@@ -32,18 +33,22 @@ final class DefaultScanQRRepository: ScanQRRepository {
                     } else {
                         observer.onNext(.notDetermined)
                     }
+                    observer.onCompleted()
                 }
             case .restricted:
                 observer.onNext(.restricted)
+                observer.onCompleted()
             case .denied:
                 observer.onNext(.denied)
+                observer.onCompleted()
             @unknown default:
                 observer.onNext(.others)
+                observer.onCompleted()
             }
-            observer.onCompleted()
             
             return Disposables.create()
         }
+        .observe(on: MainScheduler.instance)
     }
     
     func stop() -> Observable<Void> {

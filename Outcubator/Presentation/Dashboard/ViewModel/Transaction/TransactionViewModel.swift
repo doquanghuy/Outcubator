@@ -34,10 +34,12 @@ final class TransactionVM: TransactionVMInterface {
     }
     private let transaction: Transaction
     private let actions: TransactionActions
+    private let reload: PublishSubject<Void>
     
-    init(transaction: Transaction, actions: TransactionActions) {
+    init(transaction: Transaction, actions: TransactionActions, reload: PublishSubject<Void>) {
         self.transaction = transaction
         self.actions = actions
+        self.reload = reload
     }
     
     func transform(input: TransactionVMInput) -> TransactionVMOutput {
@@ -50,6 +52,7 @@ final class TransactionVM: TransactionVMInterface {
     }
     
     private func close() -> Observable<Void> {
+        reload.onNext(())
         return self.actions.close()
     }
 }

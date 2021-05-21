@@ -10,7 +10,7 @@ import RxSwift
 
 public protocol ScanFlowCoordinatorDependencies  {
     func makeScanVC(actions: ScanActions) -> ScanViewController
-    func makeTransactionSuccess(actions: TransactionActions, transaction: Transaction) -> TransactionPopup
+    func makeTransactionSuccess(actions: TransactionActions, transaction: Transaction, reload: PublishSubject<Void>) -> TransactionPopup
     func makePaymentVC(actions: PaymentActions, qrCode: QRModel) -> PaymentViewController
 }
 
@@ -52,9 +52,9 @@ public final class ScanFlowCoordinator {
             .map { _ in } ?? Observable.just(())
     }
     
-    private func showSuccess(transaction: Transaction) -> Observable<Void> {
+    private func showSuccess(transaction: Transaction, reload: PublishSubject<Void>) -> Observable<Void> {
         let actions = TransactionActions(close: self.closeTransaction)
-        let popup = dependencies.makeTransactionSuccess(actions: actions, transaction: transaction)
+        let popup = dependencies.makeTransactionSuccess(actions: actions, transaction: transaction, reload: reload)
         self.navigationController?.pushViewController(popup, animated: true)
         return navigationController?.rx.delegate
           .sentMessage(#selector(UINavigationControllerDelegate.navigationController(_:didShow:animated:)))

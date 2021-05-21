@@ -62,6 +62,7 @@ final class PaymentVM: PaymentVMInterface {
     
     func transform(input: PaymentVMInput) -> PaymentVMOutput {
         let qrCode = self.qrCode
+        let reload = PublishSubject<Void>()
         let companyName = input.didLoad
             .map({qrCode.companyName})
         let amountNum = input.didLoad
@@ -83,7 +84,7 @@ final class PaymentVM: PaymentVMInterface {
         let total = totalNum
             .map({String(format: "%@ %@", qrCode.currency, $0.formattedWithSeparator)})
 
-        let balanceNum = input.didLoad
+        let balanceNum = Observable.merge(input.didLoad, reload.asObservable())
             .flatMap({self.getCurrentBalance()})
         
         let balance = balanceNum
@@ -106,7 +107,7 @@ final class PaymentVM: PaymentVMInterface {
             .filter({$0})
             .flatMap({_ in self.makePayment()})
             .filter({$0 != nil})
-            .flatMap({self.showSuccess(transaction: $0!)})
+            .flatMap({self.showSuccess(transaction: $0!, reload: reload)})
             
         return Output(didBack: didBack, didShowPopup: didShowPopup, companyName: companyName, totalMoney: total, amount: amount, fee: fee, totalBalance: balance, didShowError: didShowError)
     }
@@ -127,8 +128,8 @@ final class PaymentVM: PaymentVMInterface {
         return self.actions.back()
     }
     
-    private func showSuccess(transaction: Transaction) -> Observable<Void> {
-        return self.actions.showSuccess(transaction)
+    private func showSuccess(transaction: Transaction, reload: PublishSubject<Void>) -> Observable<Void> {
+        return self.actions.showSuccess(transaction, reload)
     }
     
     private func showError() -> Observable<Void> {
@@ -138,6 +139,6 @@ final class PaymentVM: PaymentVMInterface {
 
 public struct PaymentActions {
     let showError: () -> Observable<Void>
-    let showSuccess: (Transaction) -> Observable<Void>
+    let showSuccess: (Transaction, PublishSubject<Void>) -> Observable<Void>
     let back: () -> Observable<Void>
 }

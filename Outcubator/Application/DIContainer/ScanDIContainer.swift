@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RxSwift
 
 final class ScanDIContainer {
     struct Dependencies {
@@ -38,8 +39,8 @@ final class ScanDIContainer {
         return PaymentVM(qrCode: qrCode, user: user, actions: actions, scanUseCases: makeScanUseCases())
     }
     
-    func makeTransactionVM(transaction: Transaction, actions: TransactionActions) -> TransactionVM {
-        return TransactionVM(transaction: transaction, actions: actions)
+    func makeTransactionVM(transaction: Transaction, actions: TransactionActions, reload: PublishSubject<Void>) -> TransactionVM {
+        return TransactionVM(transaction: transaction, actions: actions, reload: reload)
     }
     
     // MARK: - VC
@@ -51,8 +52,8 @@ final class ScanDIContainer {
         return PaymentViewController.create(with: makePaymentVM(user: self.dependencies.user, actions: actions, qrCode: qrCode))
     }
     
-    func makeTransactionSuccess(actions: TransactionActions, transaction: Transaction) -> TransactionPopup {
-        return TransactionPopup.create(viewModel: makeTransactionVM(transaction: transaction, actions: actions))
+    func makeTransactionSuccess(actions: TransactionActions, transaction: Transaction, reload: PublishSubject<Void>) -> TransactionPopup {
+        return TransactionPopup.create(viewModel: makeTransactionVM(transaction: transaction, actions: actions, reload: reload))
     }
 }
 
