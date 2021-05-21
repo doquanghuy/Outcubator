@@ -87,13 +87,13 @@ final class WalletVM: WalletVMInterface {
             .map { (data) -> (currency: String, trans: [Transaction]) in
                 return (data.currency, data.trans.filter {$0.currency == data.currency})
             }
-            .map({(currency: $0.currency, sum: $0.trans.map{$0.amount * ($0.isCredit ? 1 : -1)}.reduce(0, +))})
+            .map({(currency: $0.currency, sum: $0.trans.map{($0.amount + $0.fee) * ($0.isCredit ? 1 : -1)}.reduce(0, +))})
             .map({"\($0.currency) \($0.sum.formattedWithSeparator)"})
         let firstBalance = Observable.combineLatest(totalSections, currency)
             .map { (data) -> (cur: String, trans: [Transaction]) in
                 return (data.1, data.0.filter {$0.currency == data.1})
             }
-            .map({(cur: $0.cur, sum: $0.trans.map{$0.amount * ($0.isCredit ? 1 : -1)}.reduce(0, +))})
+            .map({(cur: $0.cur, sum: $0.trans.map{($0.amount + $0.fee) * ($0.isCredit ? 1 : -1)}.reduce(0, +))})
             .map({"\($0.cur) \($0.sum.formattedWithSeparator)"})
         let balance = Observable.merge(reloadedBalance, firstBalance)
         

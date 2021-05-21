@@ -121,7 +121,7 @@ final class PaymentVM: PaymentVMInterface {
     private func getCurrentBalance() -> Observable<Double> {
         return scanUseCases.transactions(user: self.user.asDomain())
             .map({$0.filter{$0.currency == self.qrCode.currency}})
-            .map({$0.map({$0.amount * ($0.isCredit ? 1 : -1)}).reduce(0, +)})
+            .map({$0.map({($0.amount + $0.fee) * ($0.isCredit ? 1 : -1)}).reduce(0, +)})
     }
     
     private func back() -> Observable<Void> {
